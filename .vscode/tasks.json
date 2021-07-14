@@ -35,6 +35,19 @@
 				],
 				"module": "flask"
 			}
+		},
+		{
+			"label": "Run docker-compose up",
+			"type": "docker-compose",
+			"dockerCompose": {
+				"up": {
+					"detached": true,
+					"build": true
+				},
+				"files": [
+					"${workspaceFolder}/docker-compose.debug.yml"
+				]
+			}
 		}
 	]
 }
