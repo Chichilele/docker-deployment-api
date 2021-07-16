@@ -25,7 +25,7 @@ RUN pip install --no-cache-dir debugpy==1.3.0
 FROM base AS prod
 
 RUN pip install --no-cache-dir gunicorn==20.0.4
-# COPY . /app
+COPY . /app
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
