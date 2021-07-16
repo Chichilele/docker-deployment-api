@@ -1,22 +1,22 @@
-dev:
+debug:
 	@docker-compose \
 		-p docker-deployment-api_debug \
 		-f docker-compose.debug.yml \
 		up
 
-dev_down:
+debug_down:
 	@docker-compose \
 		-p docker-deployment-api_debug \
 		-f docker-compose.debug.yml \
 		down
 
-build_dev:
+build_debug:
 	@docker-compose \
 		-p docker-deployment-api_debug \
 		-f docker-compose.debug.yml \
 		build
 
-logs_dev:
+logs_debug:
 	@docker-compose \
 		-p docker-deployment-api_debug \
 		-f docker-compose.debug.yml \
