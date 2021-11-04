@@ -49,11 +49,24 @@
 			"dockerCompose": {
 				"up": {
 					"detached": true,
-					"build": true
+					"build": true,
+					"services": [
+						"api"
+					]
 				},
 				"files": [
 					"${workspaceFolder}/docker-compose.debug.yml"
-				]
+				],
+			}
+		},
+		{
+			"label": "Deploy api",
+			"type": "shell",
+			"command": "make debug",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
 			}
 		}
 	]
